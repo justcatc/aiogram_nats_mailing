@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "aiogram_mailing"
+version = "0.1.0"
+description = "Example"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiogram = "3.0.0b5"
+pydantic = "^1.10.2"
+ormsgpack = "^1.2.3"
+nats-py = "^2.2.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+flake8 = "^5.0.4"
+black = "^22.10.0"
+
+[tool.isort]
+profile = 'black'
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    \.mypy_cache
+    | venv
+)/
+'''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

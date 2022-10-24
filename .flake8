@@ -1,0 +1,8 @@
+max-line-length = 79
+select = C, E, F, W, B
+ignore = W503, E203, F401
+exclude = 
+    .git
+    build
+    dist
+    venv
